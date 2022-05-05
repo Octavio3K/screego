@@ -12,7 +12,6 @@ fi
 if ! command -v curl &> /dev/null
 then
   apt install curl -y
-  exit
 fi
 
 #Instalación de docker desatendido 
@@ -21,7 +20,6 @@ instalaDocker(){
   then
     curl -fsSL get.docker.com -o get-docker.sh
     sudo sh get-docker.sh
-  exit
 fi
 
 }
@@ -31,7 +29,6 @@ instalaDockerCompose(){
   then
   sudo curl -L "https://github.com/docker/compose/releases/download/1.29.2/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
 	sudo chmod +x /usr/local/bin/docker-compose
-  exit
 fi
 }
 
