@@ -8,20 +8,34 @@ fi
 }
 
 #Dependencias
-apt install curl -y
 
-#Descarga y ejecuta el script de instalación de Docker desatendido 
+if ! command -v curl &> /dev/null
+then
+  apt install curl -y
+  exit
+fi
+
+#Instalación de docker desatendido 
 instalaDocker(){
-	curl -fsSL get.docker.com -o get-docker.sh
-	sudo sh get-docker.sh
-}
+	if ! command -v docker &> /dev/null
+  then
+    curl -fsSL get.docker.com -o get-docker.sh
+    sudo sh get-docker.sh
+  exit
+fi
 
+}
+#Instalación de docker-compose desatendido 
 instalaDockerCompose(){
-	sudo curl -L "https://github.com/docker/compose/releases/download/1.29.2/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
+	if ! command -v docker-compose &> /dev/null
+  then
+  sudo curl -L "https://github.com/docker/compose/releases/download/1.29.2/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
 	sudo chmod +x /usr/local/bin/docker-compose
+  exit
+fi
 }
 
-
+#
 configScreego(){
  	local miIP=$(ip route get 8.8.8.8 | sed -n '/src/{s/.*src *\([^ ]*\).*/\1/p;q}')
  	cat <<EOF > docker-compose.yml
@@ -30,8 +44,13 @@ services:
   screego:
     image: screego/server:1.6.2
     network_mode: host
+    volumes:
+    - ./:/app
     environment:
       SCREEGO_EXTERNAL_IP: "${miIP}"
+      #SCREEGO_SERVER_TLS=true
+      SCREEGO_TLS_CERT_FILE: /app/localhost.crt
+      SCREEGO_TLS_KEY_FILE: /app/localhost.key
 EOF
 
  }
@@ -44,5 +63,4 @@ docker-compose --version
 configScreego
 docker-compose up
 
-#sudo apt-get install qemu-kvm libvirt-daemon-system
-#libvirt-clients bridge-utils virt-manager
+
