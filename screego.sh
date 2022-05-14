@@ -53,7 +53,7 @@ creaLanzadorHostname(){
   cat <<EOF > Profesor.html
   <html>
     <head>
-        <meta http-equiv="refresh" content="0; url=http://localhost:5050/?room=pantalla" />
+        <meta http-equiv="refresh" content="0; url=http://localhost:5050/?room=pantalla&create=true" />
     </head>
     <body> </body>
 </html>
