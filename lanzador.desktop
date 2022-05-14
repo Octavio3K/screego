@@ -1,0 +1,6 @@
+[Desktop Entry]
+Type=Application
+Terminal=true
+Name=screego
+Icon=archivos/logo2.png
+Exec=sudo bash "$PWD/archivos/screego.sh"
