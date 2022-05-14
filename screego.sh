@@ -12,6 +12,7 @@ fi
 if ! command -v curl &> /dev/null
 then
   apt install curl -y
+  apt install qrencode -y
 fi
 
 #Instalación de docker desatendido 
@@ -32,7 +33,6 @@ instalaDockerCompose(){
 fi
 }
 
-#
 configScreego(){
  	local miIP=$(ip route get 8.8.8.8 | sed -n '/src/{s/.*src *\([^ ]*\).*/\1/p;q}')
  	cat <<EOF > docker-compose.yml
@@ -45,12 +45,39 @@ services:
     - ./:/app
     environment:
       SCREEGO_EXTERNAL_IP: "${miIP}"
-      #SCREEGO_SERVER_TLS=true
-      SCREEGO_TLS_CERT_FILE: /app/localhost.crt
-      SCREEGO_TLS_KEY_FILE: /app/localhost.key
+      SCREEGO_SERVER_TLS: 'false'
+EOF
+}
+
+creaLanzadorHostname(){
+  cat <<EOF > Profesor.html
+  <html>
+    <head>
+        <meta http-equiv="refresh" content="0; url=http://localhost:5050/?room=pantalla" />
+    </head>
+    <body> </body>
+</html>
+EOF
+}
+
+creaLanzadorCliente(){
+  local miIP=$(ip route get 8.8.8.8 | sed -n '/src/{s/.*src *\([^ ]*\).*/\1/p;q}')
+  cat <<EOF > Alumno.html
+  <html>
+    <head>
+        <meta http-equiv="refresh" content="0; url=http://${miIP}:5050/?room=pantalla" />
+    </head>
+    <body> </body>
+</html>
 EOF
 
- }
+}
+crearQR(){
+  local miIP=$(ip route get 8.8.8.8 | sed -n '/src/{s/.*src *\([^ ]*\).*/\1/p;q}')
+
+  qrencode -s 12 -o qrcode.png "http://${miIP}:5050/?room=pantalla"
+}
+
 
 permisos
 instalaDocker
@@ -58,6 +85,9 @@ docker -v
 instalaDockerCompose
 docker-compose --version
 configScreego
+creaLanzadorHostname
+creaLanzadorCliente
+crearQR
 docker-compose up
 
 
