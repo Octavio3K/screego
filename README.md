@@ -9,3 +9,4 @@ http://localhost:5050/?room=pantalla&create=true donde podremos elegir que panta
  
 Paso 5: Compartir con los alumnos la direccion del archivo Alumno.html para que ingresen a la sala creada por el profesor. Seria parecido a esta: "ipPCprofesor:5050/?room=pantalla.
 
+Paso 6: Para cerrar la transmisión de pantalla apretar la combinacion de teclas ctrl + C en la terminal donde se esta ejecutando el proceso.
