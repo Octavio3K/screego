@@ -1,13 +1,11 @@
-Paso 1: abrir una terminal
+Paso 1: Extraer el archivo screego-main.zip
 
-Paso 2: Ejecutar el comando: sudo bash cert.sh
+Paso 2: En una terminal ejecutar el comando chmod +x lanzador.desktop
 
-Paso 3: Ejecutar el comando: sudo bash screego.sh
+Paso 3: Ejecutar el comando sudo sh lanzador.desktop
 
-Paso 4: En el navegador [profesor] abrir la pagina: https://localhost:5050/?room=**nombre-de-la-sala** y darle en Create Room
+Paso 4: Abrir el archivo Profesor.html el cual nos abrira en el navegador predeterminado la siguiente direccion:
+http://localhost:5050/?room=pantalla&create=true donde podremos elegir que pantalla compartir.
+ 
+Paso 5: Compartir con los alumnos la direccion del archivo Alumno.html para que ingresen a la sala creada por el profesor. Seria parecido a esta: "ipPCprofesor:5050/?room=pantalla.
 
-Para ver la ip en la terminal ejecutar: ip route get 8.8.8.8 | sed -n '/src/{s/.*src *\([^ ]*\).*/\1/p;q}'
-
-Paso 5: En el navegador [Alumno] Abrir la pagina: https://**ipmaquinaprofesor**:5050/?room=**nombre-de-la-sala**
-
-Paso 6:
