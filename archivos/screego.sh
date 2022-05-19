@@ -24,7 +24,7 @@ then
   apt install imagemagick-6.q16 -y
 fi
 
-}
+
 #Instalación de docker desatendido 
 instalaDocker(){
 	if ! command -v docker &> /dev/null
