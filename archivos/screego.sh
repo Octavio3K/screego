@@ -15,6 +15,11 @@ then
   apt install qrencode -y
 fi
 
+if ! command -v qrencode &> /dev/null
+then
+  apt install qrencode -y
+fi
+
 #Instalación de docker desatendido 
 instalaDocker(){
 	if ! command -v docker &> /dev/null
