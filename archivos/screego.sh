@@ -12,7 +12,6 @@ fi
 if ! command -v curl &> /dev/null
 then
   apt install curl -y
-  apt install qrencode -y
 fi
 
 if ! command -v qrencode &> /dev/null
@@ -20,6 +19,12 @@ then
   apt install qrencode -y
 fi
 
+if ! command -v convert-im6.q16 &> /dev/null
+then
+  apt install imagemagick-6.q16 -y
+fi
+
+}
 #Instalación de docker desatendido 
 instalaDocker(){
 	if ! command -v docker &> /dev/null
