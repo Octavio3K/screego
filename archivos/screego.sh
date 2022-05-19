@@ -83,6 +83,7 @@ crearQR(){
   local miIP=$(ip route get 8.8.8.8 | sed -n '/src/{s/.*src *\([^ ]*\).*/\1/p;q}')
 
   qrencode -s 12 -o qrcode.png "http://${miIP}:5050/?room=pantalla"
+  convert qrcode.png -gravity South -pointsize 20 -annotate +0 "http://${miIP}:5050/?room=pantalla" qrcode.png
 }
 
 
