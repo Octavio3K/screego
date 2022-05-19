@@ -6,24 +6,17 @@ if [ "$(whoami)" != "root" ]
   exit 1
 fi
 }
-
 #Dependencias
-
 if ! command -v curl &> /dev/null
 then
   apt install curl -y
+  apt install qrencode -y
 fi
 
 if ! command -v qrencode &> /dev/null
 then
   apt install qrencode -y
 fi
-
-if ! command -v convert-im6.q16 &> /dev/null
-then
-  apt install imagemagick-6.q16 -y
-fi
-
 
 #Instalación de docker desatendido 
 instalaDocker(){
@@ -32,7 +25,6 @@ instalaDocker(){
     curl -fsSL get.docker.com -o get-docker.sh
     sudo sh get-docker.sh
 fi
-
 }
 #Instalación de docker-compose desatendido 
 instalaDockerCompose(){
@@ -42,7 +34,6 @@ instalaDockerCompose(){
 	sudo chmod +x /usr/local/bin/docker-compose
 fi
 }
-
 #
 configScreego(){
  	local miIP=$(ip route get 8.8.8.8 | sed -n '/src/{s/.*src *\([^ ]*\).*/\1/p;q}')
@@ -58,9 +49,7 @@ services:
       SCREEGO_EXTERNAL_IP: "${miIP}"
       SCREEGO_SERVER_TLS: 'false'
 EOF
-
- }
-
+}
 creaLanzadorHostname(){
   cat <<EOF > Profesor.html
   <html>
@@ -71,7 +60,6 @@ creaLanzadorHostname(){
 </html>
 EOF
 }
-
 creaLanzadorCliente(){
   local miIP=$(ip route get 8.8.8.8 | sed -n '/src/{s/.*src *\([^ ]*\).*/\1/p;q}')
   cat <<EOF > Alumno.html
@@ -82,16 +70,11 @@ creaLanzadorCliente(){
     <body> </body>
 </html>
 EOF
-
 }
 crearQR(){
   local miIP=$(ip route get 8.8.8.8 | sed -n '/src/{s/.*src *\([^ ]*\).*/\1/p;q}')
-
   qrencode -s 12 -o qrcode.png "http://${miIP}:5050/?room=pantalla"
-  convert qrcode.png -gravity South -pointsize 20 -annotate +0 "http://${miIP}:5050/?room=pantalla" qrcode.png
 }
-
-
 permisos
 instalaDocker
 docker -v
@@ -102,5 +85,3 @@ creaLanzadorHostname
 creaLanzadorCliente
 crearQR
 docker-compose up
-
-
