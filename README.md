@@ -90,17 +90,23 @@ Y luego con la cámara del celular apuntamos hacia el código QR.
 
 Apretamos en mostrar mas opciones.
 
-![alt text](https://github.com/Octavio3K/screego/blob/main/assets/19.png)
 
 Y luego en Abrir en Navegador.
 
-![alt text](https://github.com/Octavio3K/screego/blob/main/assets/20.png)
+![alt text](https://github.com/Octavio3K/screego/blob/main/assets/19.png)
 
 Y en el navegador del celular se nos abrira la pantalla compartida del
 docente.
 
-![alt text](https://github.com/Octavio3K/screego/blob/main/assets/21.png)
+![alt text](https://github.com/Octavio3K/screego/blob/main/assets/20.png)
 
 Una vez adentro de la sala con el siguiente botón podemos cambiar el
 nombre que se muestra adentro de la sala, para que el profesor nos pueda
 identificar.
+
+![alt text](https://github.com/Octavio3K/screego/blob/main/assets/21.png)
+![alt text](https://github.com/Octavio3K/screego/blob/main/assets/22.png)
+![alt text](https://github.com/Octavio3K/screego/blob/main/assets/23.png)
+
+
+
