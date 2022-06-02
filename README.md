@@ -14,6 +14,8 @@ Primero descargamos la aplicación del siguiente link
 
 Descargamos la carpeta llamada screego-main.zip y la descomprimimos.
 
+![alt text](https://github.com/Octavio3K/screego/blob/main/assets/1.png)
+
 Dentro de la carpeta que descomprimimos vamos a encontrar los siguientes
 archivos:
 
