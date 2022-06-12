@@ -84,7 +84,7 @@ echo "* Para ingresar a la sala desde otro dispositivo, escanee el *"
 echo "* código QR o ingrese en el navegador web el siguiente link :*"
 echo "* http://${miIP}:5050/?room=pantalla                    *"
 echo "**************************************************************"
-echo "* Para finalizar, utilice la combinacion de teclasCtrl+C     *"
+echo "* Para finalizar, utilice la combinacion de teclas Ctrl+C    *"
 echo "**************************************************************"
 }
 
