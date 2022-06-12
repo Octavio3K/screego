@@ -75,13 +75,25 @@ crearQR(){
   local miIP=$(ip route get 8.8.8.8 | sed -n '/src/{s/.*src *\([^ ]*\).*/\1/p;q}')
   qrencode -s 12 -o qrcode.png "http://${miIP}:5050/?room=pantalla"
 }
+mensaje(){
+  local miIP=$(ip route get 8.8.8.8 | sed -n '/src/{s/.*src *\([^ ]*\).*/\1/p;q}')
+echo "**************************************************************"
+echo "* Para iniciar la sala ejecutar el archivo Profesor.html     *"
+echo "**************************************************************"
+echo "* Para ingresar a la sala desde otro dispositivo, escanee el *"
+echo "* código QR o ingrese en el navegador web el siguiente link :*"
+echo "* http://${miIP}:5050/?room=pantalla                    *"
+echo "**************************************************************"
+echo "* Para finalizar, utilice la combinacion de teclasCtrl+C     *"
+echo "**************************************************************"
+}
+
 permisos
 instalaDocker
-docker -v
 instalaDockerCompose
-docker-compose --version
 configScreego
 creaLanzadorHostname
 creaLanzadorCliente
 crearQR
-docker-compose up
+mensaje
+docker-compose up >&/dev/null
