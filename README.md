@@ -1,6 +1,11 @@
 <span id="anchor"></span>Manual de usuario de la aplicación Screego.
 ====================================================================
 
+### <span id="anchor-1"></span>Video Tutorial
+
+[![Alt text](https://github.com/Octavio3K/screego/blob/main/assets/youtube2.png)](https://youtu.be/gqxPoY8P-aA)
+
+
 ### <span id="anchor-1"></span>Introducción:
 
 Screego es una aplicación de software libre la cual nos permite
