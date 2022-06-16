@@ -3,7 +3,7 @@
 
 ### <span id="anchor-1"></span>Video Tutorial
 
-[![Alt text](https://github.com/Octavio3K/screego/blob/main/assets/youtube2.png)](https://youtu.be/gqxPoY8P-aA)
+[![Alt text](https://img.youtube.com/vi/gqxPoY8P-aA/0.jpg)](https://www.youtube.com/watch?v=gqxPoY8P-aA)
 
 
 ### <span id="anchor-1"></span>Introducción:
