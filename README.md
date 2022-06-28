@@ -75,7 +75,7 @@ En el siguiente botón podemos ver que personas están conectadas
 Para terminar la transmisión debemos detener el docker en la Terminal
 donde se esta ejecutando con la combinación de teclas “Ctrl+C”.
 
-![alt text](https://github.com/Octavio3K/screego/blob/main/assets/13.png)
+![alt text](https://github.com/Octavio3K/screego/blob/main/assets/5-1.png)
 
 ### <span id="anchor-3"></span>Manual para los alumnos:
 
