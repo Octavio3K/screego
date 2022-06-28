@@ -3,7 +3,7 @@
 
 ### <span id="anchor-1"></span>Video Tutorial
 
-[![Alt text](https://img.youtube.com/vi/gqxPoY8P-aA/0.jpg)](https://www.youtube.com/watch?v=gqxPoY8P-aA)
+[![Alt text](https://img.youtube.com/vi/YNCS_OY4cQY/0.jpg)](https://www.youtube.com/watch?v=YNCS_OY4cQY)
 
 
 ### <span id="anchor-1"></span>Introducción:
