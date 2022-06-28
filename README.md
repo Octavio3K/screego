@@ -36,6 +36,8 @@ el paso anterior.
 
 ![alt text](https://github.com/Octavio3K/screego/blob/main/assets/4.png)
 
+> sudo sh lanzador.desktop
+
 En la terminal queda corriendo el docker con Screego.
 
 ![alt text](https://github.com/Octavio3K/screego/blob/main/assets/5.png)
@@ -113,5 +115,19 @@ identificar.
 ![alt text](https://github.com/Octavio3K/screego/blob/main/assets/22.png)
 ![alt text](https://github.com/Octavio3K/screego/blob/main/assets/23.png)
 
+### <span id="anchor-1"></span>Profesor y Alumnos
 
+**Profesor**
+
+> Nicolas Rosbaco
+
+**Alumnos**
+
+> Ramos Rodriguez, Hernan
+
+> Leon, Nestor Fabian
+
+> Merillan Nahuel Sergio
+
+> Quintas, Octavio Nicolas
 
