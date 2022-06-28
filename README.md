@@ -40,7 +40,7 @@ el paso anterior.
 
 En la terminal queda corriendo el docker con Screego.
 
-![alt text](https://github.com/Octavio3K/screego/blob/main/assets/5.png)
+![alt text](https://github.com/Octavio3K/screego/blob/main/assets/5-1.png)
 
 Y en el directorio se crean los siguientes archivos.
 
